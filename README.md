@@ -14,16 +14,16 @@ This project contains a bash script that checks if your MacBook is on battery po
 3. Make the script executable:
 
 ```bash
-chmod +x check_power_and_wifi.sh
+chmod +x battery-saver.sh
 ```
 
 ## Configuration
 
-1. Open `check_power_and_wifi.sh` in a text editor.
+1. Open `battery-saver.sh` in a text editor.
 2. Modify the `office_networks` array to include your office Wi-Fi network names:
 
 ```bash
-office_networks=("Your Office Network" "Another Office Network" "Yet Another Network")
+office_networks=("Eleven Ways" "Home")
 ```
 
 ## Setting Up the Cron Job
@@ -37,7 +37,7 @@ To run the script automatically every 15 minutes:
     ```
 3. Add the following line (replace `/path/to/script` with the actual path):
     ```
-    */15 * * * * /path/to/script/check_power_and_wifi.sh
+    */15 * * * * /path/to/script/battery-saver.sh
     ```
 4. Save and exit the editor.
 
@@ -46,7 +46,7 @@ To run the script automatically every 15 minutes:
 To run the script manually:
 
 ```
-./check_power_and_wifi.sh
+./battery-saver.sh
 ```
 
 ## How It Works
